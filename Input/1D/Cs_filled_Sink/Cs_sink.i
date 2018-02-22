@@ -796,8 +796,9 @@
 [Executioner]
   type = Transient
   solve_type = PJFNK
-  petsc_options_iname = '-pc_type -pc_hypre_type'
-  petsc_options_value = 'hypre boomeramg'
+  petsc_options = '-snes_converged_reason -ksp_converged_reason -snes_linesearch_monitor -ksp_monitor_true_residual -ksp_monitor_singular_value -snes_view' 
+  petsc_options_iname = '-pc_type -pc_hypre_type -ksp_gmres_restart'
+  petsc_options_value = 'hypre boomeramg 150'
   dt = 100
   num_steps = 50000
   #end_time = 4.97664e+7     ### 288 effective full power days 5% burnup extend to 10%
