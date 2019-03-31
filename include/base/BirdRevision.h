@@ -3,6 +3,7 @@
 #ifndef BIRD_REVISION_H
 #define BIRD_REVISION_H
 
-#define BIRD_REVISION "git commit 8cd953c on 2018-02-21"
+#define BIRD_REVISION "git commit 978e951 on 2019-03-30"
+#define BIRD_VERSION "978e951"
 
 #endif // BIRD_REVISION_H
