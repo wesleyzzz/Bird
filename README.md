@@ -17,3 +17,4 @@ make
 Note: input file and mesh file are in
 ~projects/Bird/input
 
+# Bird
