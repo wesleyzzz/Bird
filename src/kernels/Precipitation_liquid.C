@@ -38,12 +38,14 @@ Precipitation_liquid::computeQpResidual()
 
   if (_has_coupled_precipitate)
   {
-    if (_u[_qp] > _solubility[_qp] || _coupled_variable[_qp] > 0.0)  // will cause a bad performance, rapid shrinking of timestep, do not make a comparison here
+     if (_u[_qp] > _solubility[_qp])      
+//if (_u[_qp] > _solubility[_qp] || _coupled_variable[_qp] > 0.0)  // will cause a bad performance, rapid shrinking of timestep, do not make a comparison here
       r = prefactor * (_u[_qp] - _solubility[_qp]);
   }
   else if (_has_coupled_dissolve)
   {
-    if (_coupled_variable[_qp] > _solubility[_qp] || _u[_qp] > 0.0)
+      if (_coupled_variable[_qp] > _solubility[_qp])
+    //if (_coupled_variable[_qp] > _solubility[_qp] || _u[_qp] > 0.0)
       r = prefactor * (_coupled_variable[_qp] - _solubility[_qp]);
   }
   else
@@ -61,12 +63,14 @@ Precipitation_liquid::computeQpJacobian()
 
   if (_has_coupled_precipitate)
   {
-    if (_u[_qp] > _solubility[_qp] || _coupled_variable[_qp] > 0.0)
+    if (_u[_qp] > _solubility[_qp])
+    //if (_u[_qp] > _solubility[_qp] || _coupled_variable[_qp] > 0.0)
       jac = prefactor * _phi[_j][_qp];
   }
   else if (_has_coupled_dissolve)
   {
-    if (_coupled_variable[_qp] > _solubility[_qp] || _u[_qp] > 0.0)
+    if (_coupled_variable[_qp] > _solubility[_qp])
+    //if (_coupled_variable[_qp] > _solubility[_qp] || _u[_qp] > 0.0)
       jac = 0.0;
   }
   else

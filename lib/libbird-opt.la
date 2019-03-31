@@ -14,10 +14,10 @@ library_names='libbird-opt.so.0.0.0 libbird-opt.so.0 libbird-opt.so'
 old_library=''
 
 # Linker flags that cannot go in dependency_libs.
-inherited_linker_flags=' -fopenmp -pthread'
+inherited_linker_flags=' -fopenmp'
 
 # Libraries that this one depends upon.
-dependency_libs=' -L/home/moose/projects/moose/modules/module_loader/lib/ /home/moose/projects/moose/modules/module_loader/lib/libmodule_loader_with_tm_pf-opt.la -L/home/moose/projects/moose/modules/phase_field/lib/ -L/home/moose/projects/moose/modules/tensor_mechanics/lib/ /home/moose/projects/moose/modules/phase_field/lib/libphase_field-opt.la /home/moose/projects/moose/modules/phase_field/lib/libphase_field-opt.la /home/moose/projects/moose/modules/tensor_mechanics/lib/libtensor_mechanics-opt.la /home/moose/projects/moose/modules/tensor_mechanics/lib/libtensor_mechanics-opt.la /opt/moose/openmpi/openmpi-1.8.4/gcc-opt/lib/libmpi_cxx.la /opt/moose/gcc_5.3.0/lib/../lib64/libstdc++.la /opt/moose/openmpi/openmpi-1.8.4/gcc-opt/lib/libmpi.la /opt/moose/openmpi/openmpi-1.8.4/gcc-opt/lib/libopen-rte.la /opt/moose/openmpi/openmpi-1.8.4/gcc-opt/lib/libopen-pal.la -ldl -lrt -lutil /opt/moose/gcc_5.3.0/lib/../lib64/libstdc++.la'
+dependency_libs=' /home/moose/projects/moose/modules/module_loader/lib/libmodule_loader_with_tm_pf-opt.la /home/moose/projects/moose/modules/phase_field/lib/libphase_field-opt.la /home/moose/projects/moose/modules/tensor_mechanics/lib/libtensor_mechanics-opt.la /opt/moose/mpich-3.2/gcc-7.2.0/lib/libmpicxx.la /opt/moose/gcc-7.2.0/lib/../lib64/libstdc++.la /opt/moose/mpich-3.2/gcc-7.2.0/lib/libmpi.la -lrt -lpthread /opt/moose/gcc-7.2.0/lib/../lib64/libstdc++.la'
 
 # Names of additional weak libraries provided by this library
 weak_library_names=''
@@ -38,4 +38,4 @@ dlopen=''
 dlpreopen=''
 
 # Directory that this library needs to be installed in:
-libdir='/home/moose/projects/bird/lib'
+libdir='/home/moose/projects/Bird/lib'
